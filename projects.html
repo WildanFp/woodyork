@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - DesignLab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-wood {
+            background-color: #8B5CF6;
+        }
+        .text-wood {
+            color: #8B5CF6;
+        }
+        .border-wood {
+            border-color: #8B5CF6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-10 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-purple-600">Design<span class="text-indigo-600">Lab</span></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="projects.html" class="text-indigo-600 transition-all duration-300 relative group">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600"></span>
+                    </a>
+                    <a href="services.html" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 relative group">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition-all duration-300 relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-playfair font-bold mb-6" data-aos="fade-up">Our Projects</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Explore our portfolio of innovative designs and creative solutions
+            </p>
+        </div>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
+            <button class="filter-btn bg-wood text-white px-6 py-2 rounded-full transition-all duration-300" data-category="all">
+                All Projects
+            </button>
+            <button class="filter-btn border border-wood text-wood px-6 py-2 rounded-full transition-all duration-300" data-category="residential">
+                Residential
+            </button>
+            <button class="filter-btn border border-wood text-wood px-6 py-2 rounded-full transition-all duration-300" data-category="commercial">
+                Commercial
+            </button>
+        </div>
+        
+        <!-- Sub Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mt-4">
+            <!-- Residential Sub Filters -->
+            <button class="sub-filter-btn residential-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="bedroom">
+                Bedroom
+            </button>
+            <button class="sub-filter-btn residential-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="living">
+                Living Room
+            </button>
+            <button class="sub-filter-btn residential-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="kitchen">
+                Kitchen
+            </button>
+
+            <!-- Commercial Sub Filters -->
+            <button class="sub-filter-btn commercial-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="office">
+                Office
+            </button>
+            <button class="sub-filter-btn commercial-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="retail">
+                Retail
+            </button>
+            <button class="sub-filter-btn commercial-filter hidden border border-wood text-wood px-4 py-1 rounded-full text-sm transition-all duration-300" data-category="restaurant">
+                Restaurant
+            </button>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="project-item group cursor-pointer" data-categories="residential bedroom" data-aos="fade-up">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg" 
+                             alt="Modern Bedroom Design"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Luxurious Master Bedroom</h3>
+                        <p class="text-gray-600">Modern bedroom design with custom furniture</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item group cursor-pointer" data-categories="commercial office" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1743555/pexels-photo-1743555.jpeg" 
+                             alt="Modern Office Design"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Creative Office Space</h3>
+                        <p class="text-gray-600">Open-concept office with collaborative areas</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item group cursor-pointer" data-categories="residential living" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" 
+                             alt="Modern Living Room"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Contemporary Living Space</h3>
+                        <p class="text-gray-600">Minimalist living room with natural light</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item group cursor-pointer" data-categories="commercial restaurant" data-aos="fade-up">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/6267516/pexels-photo-6267516.jpeg" 
+                             alt="Restaurant Design"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Elegant Restaurant Interior</h3>
+                        <p class="text-gray-600">Modern dining space with ambient lighting</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-item group cursor-pointer" data-categories="residential kitchen" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg" 
+                             alt="Modern Kitchen Design"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Luxury Kitchen Space</h3>
+                        <p class="text-gray-600">Contemporary kitchen with premium finishes</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-item group cursor-pointer" data-categories="commercial retail" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg" 
+                             alt="Retail Store Design"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="project-details.html" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-playfair font-bold">Modern Retail Space</h3>
+                        <p class="text-gray-600">Innovative retail design with display areas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">DesignLab</h3>
+                    <p class="text-gray-400 leading-relaxed">Creating exceptional digital experiences through innovative design solutions that transform businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-all duration-300">Home</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition-all duration-300">Projects</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all duration-300">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-all duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full bg-gray-800 border-0 focus:ring-2 focus:ring-indigo-600">
+                        <button class="bg-indigo-600 px-6 rounded-r-lg hover:bg-indigo-700 transition-all duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 DesignLab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const subFilterButtons = document.querySelectorAll('.sub-filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        const residentialFilters = document.querySelectorAll('.residential-filter');
+        const commercialFilters = document.querySelectorAll('.commercial-filter');
+
+        // Initialize with all projects visible
+        filterProjects('all');
+
+        // Main category filter
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Update active button state
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('filter-active', 'bg-wood', 'text-white');
+                    btn.classList.add('border', 'border-wood', 'text-wood');
+                });
+                button.classList.add('filter-active', 'bg-wood', 'text-white');
+                button.classList.remove('border', 'border-wood', 'text-wood');
+
+                // Reset sub-filters
+                subFilterButtons.forEach(btn => {
+                    btn.classList.remove('filter-active', 'bg-wood', 'text-white');
+                });
+
+                // Show/hide subcategories with animation
+                if (category === 'residential') {
+                    residentialFilters.forEach(filter => {
+                        filter.classList.remove('hidden');
+                        requestAnimationFrame(() => {
+                            filter.classList.add('opacity-100');
+                        });
+                    });
+                    commercialFilters.forEach(filter => {
+                        filter.classList.add('hidden');
+                        filter.classList.remove('opacity-100');
+                    });
+                } else if (category === 'commercial') {
+                    commercialFilters.forEach(filter => {
+                        filter.classList.remove('hidden');
+                        requestAnimationFrame(() => {
+                            filter.classList.add('opacity-100');
+                        });
+                    });
+                    residentialFilters.forEach(filter => {
+                        filter.classList.add('hidden');
+                        filter.classList.remove('opacity-100');
+                    });
+                } else {
+                    residentialFilters.forEach(filter => {
+                        filter.classList.add('hidden');
+                        filter.classList.remove('opacity-100');
+                    });
+                    commercialFilters.forEach(filter => {
+                        filter.classList.add('hidden');
+                        filter.classList.remove('opacity-100');
+                    });
+                }
+
+                // Filter projects with animation
+                filterProjects(category);
+            });
+        });
+
+        // Sub-category filter
+        subFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Update active button state
+                subFilterButtons.forEach(btn => {
+                    btn.classList.remove('filter-active', 'bg-wood', 'text-white');
+                });
+                button.classList.add('filter-active', 'bg-wood', 'text-white');
+
+                // Filter projects with animation
+                filterProjects(category);
+            });
+        });
+
+        function filterProjects(category) {
+            projectItems.forEach(item => {
+                const categories = item.getAttribute('data-categories').split(' ');
+                const shouldShow = category === 'all' || categories.includes(category);
+                
+                if (shouldShow) {
+                    item.style.display = 'block';
+                    requestAnimationFrame(() => {
+                        item.style.opacity = '1';
+                    });
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        if (item.style.opacity === '0') {
+                            item.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav div div.hidden');
+        
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Woodyork Interior Design</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            light: '#D4A373',
+                            DEFAULT: '#A27B5C',
+                            dark: '#8B4513'
+                        },
+                    },
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-wood/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-playfair font-bold text-wood">
+                    Woodyork
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-wood transition-colors">Home</a>
+                    <a href="about.html" class="text-wood">About</a>
+                    <a href="services.html" class="text-white hover:text-wood transition-colors">Services</a>
+                    <a href="projects.html" class="text-white hover:text-wood transition-colors">Projects</a>
+                    <a href="contact.html" class="text-white hover:text-wood transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-playfair font-bold text-center mb-8">About Woodyork</h1>
+            <p class="text-xl text-gray-400 text-center max-w-3xl mx-auto">
+                Crafting exceptional interior spaces with a perfect blend of elegance and functionality
+            </p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden">
+                    <!-- Replace src with actual video -->
+                    <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3">
+                        <source src="your-video-source.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-playfair font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-400 mb-4">
+                        At Woodyork, we believe that every space tells a story. Founded with a passion for creating exceptional interior spaces, we've dedicated ourselves to transforming houses into homes and spaces into experiences.
+                    </p>
+                    <p class="text-gray-400">
+                        Our approach combines timeless elegance with modern functionality, ensuring that each project we undertake reflects the unique personality and lifestyle of our clients while maintaining the highest standards of design and craftsmanship.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center mb-16">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-8 bg-black border border-wood/20 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3" 
+                             alt="Client 1" 
+                             class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-400">Residential Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        "Woodyork transformed our house into a dream home. Their attention to detail and understanding of our vision was exceptional."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-8 bg-black border border-wood/20 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3" 
+                             alt="Client 2" 
+                             class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-400">Commercial Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        "The team at Woodyork brought our coffee shop vision to life. Their design perfectly captures our brand essence."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-8 bg-black border border-wood/20 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3" 
+                             alt="Client 3" 
+                             class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-gray-400">Interior Design Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        "Professional, creative, and detail-oriented. Woodyork delivered beyond our expectations with their custom furniture solutions."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center mb-16">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3" 
+                             alt="Team Member 1"
+                             class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-xl font-playfair font-bold">David Anderson</h4>
+                    <p class="text-wood">Founder & Lead Designer</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3" 
+                             alt="Team Member 2"
+                             class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-xl font-playfair font-bold">Sophie Martinez</h4>
+                    <p class="text-wood">Interior Designer</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3" 
+                             alt="Team Member 3"
+                             class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-xl font-playfair font-bold">James Wilson</h4>
+                    <p class="text-wood">Project Manager</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3" 
+                             alt="Team Member 4"
+                             class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h4 class="text-xl font-playfair font-bold">Emma Thompson</h4>
+                    <p class="text-wood">Design Consultant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-wood/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-playfair font-bold text-wood mb-4">Woodyork</h3>
+                    <p class="text-gray-400">
+                        Premium interior design and custom furniture solutions
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-wood transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-wood transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-wood transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-wood transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-wood transition-colors">Interior Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-wood transition-colors">Build Interior Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-wood transition-colors">Custom Furniture</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2 text-wood"></i> info@woodyork.com</li>
+                        <li><i class="fas fa-phone mr-2 text-wood"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-wood"></i> 123 Design Street, Creative City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-wood/20 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Woodyork. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav div div.hidden');
+        
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('p-4');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Woodyork Interior Design</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            light: '#D4A373',
+                            DEFAULT: '#A27B5C',
+                            dark: '#8B4513'
+                        },
+                    },
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-playfair font-bold text-wood">
+                    Woodyork
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-white hover:text-wood transition-colors">About</a>
+                    <a href="index.html#projects" class="text-wood">Projects</a>
+                    <a href="index.html#services" class="text-white hover:text-wood transition-colors">Services</a>
+                    <a href="index.html#contact" class="text-white hover:text-wood transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="min-h-[60vh] relative flex items-center justify-center parallax" 
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.0.3');">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-4 mb-8 text-sm">
+                    <a href="index.html#projects" class="text-wood hover:text-wood-dark transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+                    </a>
+                    <span class="text-gray-400">/</span>
+                    <span class="text-gray-400">Residential</span>
+                    <span class="text-gray-400">/</span>
+                    <span>Modern Living Room</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-6">
+                    Modern Living Room Design
+                </h1>
+                <p class="text-xl text-gray-300">
+                    A contemporary living space that combines comfort with sophistication
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <!-- Before/After Comparison -->
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-3xl font-playfair font-bold mb-8">Transformation</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3" 
+                             alt="Before Renovation" 
+                             class="w-full h-[400px] object-cover rounded-lg">
+                        <div class="absolute top-4 left-4 bg-black/80 px-4 py-2 rounded">BEFORE</div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.0.3" 
+                             alt="After Renovation" 
+                             class="w-full h-[400px] object-cover rounded-lg">
+                        <div class="absolute top-4 left-4 bg-wood px-4 py-2 rounded">AFTER</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <h2 class="text-3xl font-playfair font-bold mb-6">Project Overview</h2>
+                    <p class="text-gray-400 mb-6">
+                        This modern living room design project focused on creating a harmonious blend of comfort and style. 
+                        The space features custom-designed furniture, carefully selected materials, and a sophisticated color palette 
+                        that creates a warm and inviting atmosphere.
+                    </p>
+                    <p class="text-gray-400 mb-6">
+                        The design incorporates natural materials, including wood elements and textural fabrics, to add depth 
+                        and interest to the space. Ambient lighting was strategically placed to enhance the room's atmosphere 
+                        and highlight key design features.
+                    </p>
+                    <h3 class="text-xl font-bold mb-4">Key Features</h3>
+                    <ul class="text-gray-400 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-wood mr-2"></i> Custom-designed seating arrangement</li>
+                        <li><i class="fas fa-check text-wood mr-2"></i> Integrated storage solutions</li>
+                        <li><i class="fas fa-check text-wood mr-2"></i> Premium material selection</li>
+                        <li><i class="fas fa-check text-wood mr-2"></i> Ambient lighting design</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-zinc-900 p-8 rounded-lg sticky top-24">
+                        <h3 class="text-xl font-bold mb-6">Project Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between pb-4 border-b border-wood/20">
+                                <span class="text-gray-400">Category</span>
+                                <span>Residential</span>
+                            </div>
+                            <div class="flex justify-between pb-4 border-b border-wood/20">
+                                <span class="text-gray-400">Location</span>
+                                <span>Creative City</span>
+                            </div>
+                            <div class="flex justify-between pb-4 border-b border-wood/20">
+                                <span class="text-gray-400">Area</span>
+                                <span>450 sq.ft</span>
+                            </div>
+                            <div class="flex justify-between pb-4 border-b border-wood/20">
+                                <span class="text-gray-400">Duration</span>
+                                <span>6 weeks</span>
+                            </div>
+                            <div class="flex justify-between pb-4 border-b border-wood/20">
+                                <span class="text-gray-400">Completed</span>
+                                <span>January 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                <div data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-4.0.3" 
+                         alt="Living Room Detail"
+                         class="w-full h-[500px] object-cover rounded-lg">
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.0.3" 
+                         alt="Living Room Furniture"
+                         class="w-full h-[500px] object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold mb-12" data-aos="fade-up">Related Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Related Project 1 -->
+                <div class="group" data-aos="fade-up">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3" 
+                             alt="Related Project 1"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Elegant Bedroom Design</h3>
+                    <p class="text-gray-400">Modern master bedroom with custom furniture</p>
+                </div>
+
+                <!-- Related Project 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-4.0.3" 
+                             alt="Related Project 2"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Modern Kitchen Design</h3>
+                    <p class="text-gray-400">Contemporary kitchen with premium finishes</p>
+                </div>
+
+                <!-- Related Project 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3" 
+                             alt="Related Project 3"
+                             class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#" class="px-6 py-3 bg-wood text-white rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Luxury Home Office</h3>
+                    <p class="text-gray-400">Sophisticated workspace design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-wood/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-playfair font-bold text-wood mb-4">Woodyork</h3>
+                    <p class="text-gray-400">
+                        Premium interior design and custom furniture solutions
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-wood transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-wood transition-colors">Services</a></li>
+                        <li><a href="index.html#projects" class="text-gray-400 hover:text-wood transition-colors">Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-wood transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-wood transition-colors">Interior Design</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-wood transition-colors">Build Interior Design</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-wood transition-colors">Custom Furniture</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-wood/10 rounded-full flex items-center justify-center hover:bg-wood hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-wood/10 rounded-full flex items-center justify-center hover:bg-wood hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-wood/10 rounded-full flex items-center justify-center hover:bg-wood hover:text-white transition-colors">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-wood/10 rounded-full flex items-center justify-center hover:bg-wood hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-wood/20 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Woodyork. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav div div.hidden');
+        
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('p-4');
+        });
+    </script>
+</body>
+</html>
